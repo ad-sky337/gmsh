@@ -1206,6 +1206,10 @@ StringXNumber MeshOptions_Number[] = {
     "CPU time (in seconds) for the generation of the current mesh (read-only)" },
   { F|O, "CreateTopologyMsh2" , opt_mesh_create_topology_msh2, 0. ,
     "Attempt to (re)create the model topology when reading MSH2 files" },
+  { F|O, "CreateEdges" , opt_mesh_create_edges, 0. ,
+    "Create mesh edges before saving MSH files" },
+  { F|O, "CreateFaces" , opt_mesh_create_faces, 0. ,
+    "Create mesh edges before saving MSH files" },
 
   { F|O, "DrawSkinOnly" , opt_mesh_draw_skin_only , 0. ,
     "Draw only the skin of 3D meshes?" },
@@ -1620,6 +1624,8 @@ StringXNumber MeshOptions_Number[] = {
     "Smooth the mesh normals?" },
   { F|O, "SmoothRatio" , opt_mesh_smooth_ratio , 1.8 ,
     "Ratio between mesh sizes at nodes of a same edge (used in BAMG)" },
+  { F|O, "SplitMeshLocalBREP" , opt_mesh_split_mesh_local_brep , 0. ,
+    "Only export the subset of the BREP that is relevant when splitting mesh files" },
   { F|O, "StlAngularDeflection" , opt_mesh_stl_angular_deflection , 0.3 ,
     "Maximum angular deflection when creating STL representations of entities "
     "(currently only used with the OpenCASCADE kernel)"},
